@@ -12,3 +12,5 @@ if filereadable($HOME . "/.gvimrc.local")
   source ~/.gvimrc.local
 endif
 
+set ignorecase
+set smartcase
