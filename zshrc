@@ -58,8 +58,13 @@ setopt AUTOCD
 setopt AUTOPUSHD PUSHDMINUS PUSHDSILENT PUSHDTOHOME
 setopt cdablevars
 
-# Try to correct command line spelling
-setopt CORRECT CORRECT_ALL
+# Try to correct command line spelling.  Disable this.
+# setopt CORRECT CORRECT_ALL
 
 # Enable extended globbing
 setopt EXTENDED_GLOB
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
+export PATH="/home/charles/aptana3:$PATH"
+export GEM_EDITOR="studio3"
