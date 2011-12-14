@@ -68,3 +68,7 @@ setopt EXTENDED_GLOB
 
 export PATH="/home/charles/aptana3:$PATH"
 export GEM_EDITOR="studio3"
+
+if [ -f "/home/charles/dotfiles/lib/stderred.so" ]; then
+  export LD_PRELOAD="/home/charles/dotfiles/lib/stderred.so"
+fi
