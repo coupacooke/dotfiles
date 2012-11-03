@@ -1,3 +1,3 @@
-#!/usr/bin/sh
+#!/bin/sh
 
 gem install gem-open

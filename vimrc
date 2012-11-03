@@ -54,8 +54,8 @@ highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
 " Numbers
-set number
-set numberwidth=5
+" set number
+" set numberwidth=5
 
 " Snippets are activated by Shift+Tab
 let g:snippetsEmu_key = "<S-Tab>"
@@ -121,3 +121,22 @@ function! DoPrettyXML()
 endfunction
 command! PrettyXML call DoPrettyXML()
 
+au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
+let coffee_make_options = '--bare'
+
+" Start NERDTree and default to the text pane
+autocmd VimEnter *  NERDTree
+autocmd VimEnter * wincmd p
+
+" Tab to switch through windows
+nmap <silent> <Tab> <C-W><C-W>
+
+" Easily switch windows with Arrows
+nmap <silent> <Up> :wincmd k<CR>
+nmap <silent> <Down> :wincmd j<CR>
+nmap <silent> <Left> :wincmd h<CR>
+nmap <silent> <Right> :wincmd l<CR>
+
+
+call pathogen#infect()
+call pathogen#helptags()
