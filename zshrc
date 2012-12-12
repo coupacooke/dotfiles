@@ -63,8 +63,9 @@ setopt cdablevars
 
 # Enable extended globbing
 setopt EXTENDED_GLOB
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export PATH="/home/charles/aptana3:$PATH"
 export GEM_EDITOR="studio3"

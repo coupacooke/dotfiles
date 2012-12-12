@@ -1,6 +1,7 @@
 set nocompatible  " Use Vim settings, rather then Vi settings
 set nobackup
 set nowritebackup
+set noswapfile
 set history=50
 set ruler         " show the cursor position all the time
 set showcmd       " display incomplete commands
@@ -137,6 +138,11 @@ nmap <silent> <Down> :wincmd j<CR>
 nmap <silent> <Left> :wincmd h<CR>
 nmap <silent> <Right> :wincmd l<CR>
 
+nmap <silent> <C-T> <Leader>t
+
+nmap <silent> <S-Tab> gt
+
+set hidden
 
 call pathogen#infect()
 call pathogen#helptags()
