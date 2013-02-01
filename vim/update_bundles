@@ -4,6 +4,7 @@ git_bundles = [
   "git://github.com/scrooloose/nerdtree.git",
   "git://github.com/kchmck/vim-coffee-script",
   "git://github.com/mileszs/ack.vim",
+  "git://github.com/digitaltoad/vim-jade",
   [ "git://github.com/wincent/Command-T.git", 'rake make']
 ]
 
