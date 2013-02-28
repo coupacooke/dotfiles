@@ -66,12 +66,11 @@ setopt EXTENDED_GLOB
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
-export PATH="/home/charles/aptana3:$PATH"
+export PATH="/home/charles/dotfiles/bin:/home/charles/aptana3:/opt/vagrant/bin:$PATH"
 export GEM_EDITOR="studio3"
 
 if [ -f "/home/charles/dotfiles/lib/stderred.so" ]; then
   export LD_PRELOAD="/home/charles/dotfiles/lib/stderred.so"
 fi
-export PATH="/home/charles/aptana3:$PATH"
 #export PATH="./node_modules/.bin/:/home/charles/aptana3:$PATH"
 export GEM_EDITOR="studio3"

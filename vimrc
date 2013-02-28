@@ -81,6 +81,9 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
+" Remove trailing whitespace
+nnoremap <Leader>rtw :%s/\s\+$//e<CR>
+
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
 
@@ -138,6 +141,8 @@ nmap <silent> <Right> :wincmd l<CR>
 nmap <silent> <C-T> <Leader>t
 
 nmap <silent> <S-Tab> gt
+
+nmap <C-e> :NERDTreeToggle<CR>
 
 set hidden
 
