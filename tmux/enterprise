@@ -1,0 +1,16 @@
+#!/bin/sh
+
+SESSION='enterprise'
+
+tmux -2 new-session -d -s $SESSION
+
+tmux new-window -t $SESSION:0 -n "zeus"
+tmux send-keys "cd /usr/local/src/coupa/enterprise_fork && zeus start" C-m
+
+tmux new-window -t $SESSION:1 -n "log"
+tmux send-keys "tail -f /usr/local/src/coupa/enterprise_fork/log/development.log" C-m
+
+tmux new-window -t $SESSION:2 -n "console"
+tmux send-keys "cd /usr/local/src/coupa/enterprise_fork" C-m
+
+tmux -2 attach-session -t $SESSION

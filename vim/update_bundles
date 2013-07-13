@@ -7,7 +7,8 @@ git_bundles = [
   "git://github.com/digitaltoad/vim-jade",
   "git://github.com/Lokaltog/vim-powerline.git",
   "git://github.com/scrooloose/syntastic.git",
-  [ "git://github.com/wincent/Command-T.git", 'rake make']
+  "git@github.com:kien/ctrlp.vim.git"
+#  [ "git://github.com/wincent/Command-T.git", 'rake make']
 ]
 
 vim_org_scripts = [
