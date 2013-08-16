@@ -145,6 +145,15 @@ nmap <silent> <C-T> <Leader>t
 
 nmap <C-e> :NERDTreeToggle<CR>
 
+nnoremap <S-h> gT
+nnoremap <S-l> gt
+
+nnoremap <Leader>a= :Tabularize /=<CR>
+nnoremap <Leader>a: :Tabularize /:\zs<CR>
+
+" Quick copy to clipboard
+nmap <C-c> "+
+
 set hidden
 
 call pathogen#infect()

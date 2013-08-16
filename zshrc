@@ -80,7 +80,7 @@ setopt cdablevars
 setopt EXTENDED_GLOB
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/dotfiles/tmux:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH="/home/charles/dotfiles/bin:/home/charles/aptana3:/opt/vagrant/bin:$PATH"
 export GEM_EDITOR="studio3"
 

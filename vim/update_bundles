@@ -7,7 +7,10 @@ git_bundles = [
   "git://github.com/digitaltoad/vim-jade",
   "git://github.com/Lokaltog/vim-powerline.git",
   "git://github.com/scrooloose/syntastic.git",
+  "git://github.com/myusuf3/numbers.vim.git",
+  "git@github.com:godlygeek/tabular.git",
   "git@github.com:kien/ctrlp.vim.git"
+    # ctrlp is pure vimscript so it beats out command-t
 #  [ "git://github.com/wincent/Command-T.git", 'rake make']
 ]
 
@@ -15,8 +18,6 @@ vim_org_scripts = [
   ["IndexedSearch", "7062",  "plugin"],
   ["nerdtree-ack", "17196",  "plugin"]
 ]
-
-#  ["LustyJuggler", "17547", "plugin"]
 
 require 'fileutils'
 require 'open-uri'
