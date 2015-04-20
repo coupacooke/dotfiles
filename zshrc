@@ -16,6 +16,8 @@ if [ -e "$HOME/.aliases" ]; then
   source "$HOME/.aliases"
 fi
 
+for f in ~/.aliases_*; do source $f; done
+
 # vi mode
 bindkey -v
 bindkey "^F" vi-cmd-mode
@@ -92,9 +94,11 @@ function marks {
 
 # Enable extended globbing
 setopt EXTENDED_GLOB
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
-PATH=$PATH:$HOME/dotfiles/tmux:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# load rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
 export PATH="/home/charles/dotfiles/bin:/home/charles/aptana3:/opt/vagrant/bin:$PATH"
 export GEM_EDITOR="studio3"
 
@@ -103,3 +107,6 @@ if [ -f "/home/charles/dotfiles/lib/stderred.so" ]; then
 fi
 #export PATH="./node_modules/.bin/:/home/charles/aptana3:$PATH"
 export GEM_EDITOR="studio3"
+
+# Custom scripts
+export PATH=$PATH:$HOME/bin
